@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
 
 const Card = styled.div`
   border: 1px solid #333;
@@ -18,4 +19,4 @@ const PriceTicker = props => {
   );
 };
 
-export default PriceTicker;
+export default connect()(PriceTicker);
