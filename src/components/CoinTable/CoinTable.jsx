@@ -3,6 +3,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import ReactTable from 'react-table';
+import { Container, Row, Col } from 'reactstrap';
 
 import 'react-table/react-table.css';
 
@@ -47,7 +48,13 @@ const CoinTable = props => {
 
   return (
     <div>
-      <ReactTable data={props.data} columns={columns} />
+      <Container>
+        <Row>
+          <Col>
+            <ReactTable data={props.data} columns={columns} />
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 };
