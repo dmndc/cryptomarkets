@@ -6,12 +6,9 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
+  NavLink
 } from 'reactstrap';
+import logo from '../../mainlogo.svg';
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -31,7 +28,9 @@ export default class Example extends React.Component {
     return (
       <div>
         <Navbar color="dark" inverse expand="md">
-          <NavbarBrand href="/">cryptomarkets</NavbarBrand>
+          <NavbarBrand href="/">
+            <img src={logo} height="35" /> cryptomarkets
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
