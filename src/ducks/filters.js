@@ -1,3 +1,5 @@
+// @flow
+
 const initialState = {
   searchTerm: 'ZEC',
   marketCapFilter: '10000',
@@ -5,11 +7,11 @@ const initialState = {
   coins: [{ name: 'zec' }, { name: 'kec' }, { name: 'pec' }]
 };
 
-const SET_SEARCH_TERM = 'SET_SEARCH_TERM';
-const SET_MARKETCAP_FILTER = 'SET_MARKETCAP_FILTER';
-const SET_PRICE_FILTER = 'SET_PRICE_FILTER';
+const SET_SEARCH_TERM: string = 'SET_SEARCH_TERM';
+const SET_MARKETCAP_FILTER: string = 'SET_MARKETCAP_FILTER';
+const SET_PRICE_FILTER: string = 'SET_PRICE_FILTER';
 
-export default function reducer(state = initialState, action) {
+export default function reducer(state: Object = initialState, action: Object): Object {
   switch (action.type) {
     case SET_SEARCH_TERM:
       return { ...state, searchTerm: action.payload };
@@ -25,21 +27,21 @@ export default function reducer(state = initialState, action) {
   }
 }
 
-export function setSearchTerm(searchTerm) {
+export function setSearchTerm(searchTerm: string) {
   return {
     type: SET_SEARCH_TERM,
     payload: searchTerm
   };
 }
 
-export function setMarketCapFilter(value) {
+export function setMarketCapFilter(value: number) {
   return {
     type: SET_MARKETCAP_FILTER,
     payload: value
   };
 }
 
-export function setPriceFilter(price) {
+export function setPriceFilter(price: number) {
   return {
     type: SET_PRICE_FILTER,
     payload: price
