@@ -1,22 +1,22 @@
-## Cryptomarkets
+# Cryptomarkets
 
 just another crypto tracker
 
 ## Tools used
 
-## Frontend
+### Frontend
 
 * React
 * Redux
 * Bootstrap
 * styled-components
 
-## Backend
+### Backend
 
 * Node
 * Express
 
-## Database
+### Database
 
 * Postgres
 * Sequelize ORM
