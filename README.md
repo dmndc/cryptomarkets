@@ -1,3 +1,7 @@
+## Cryptomarkets
+
+just another crypto tracker
+
 ## Tools used
 
 ## Frontend
