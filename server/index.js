@@ -1,10 +1,24 @@
-const models = require('./models/index');
+const express = require('express');
+const bodyParser = require('body-parser');
+const logger = require('morgan');
 
-models.sequelize
-  .authenticate()
-  .then(() => {
-    console.log('Connection successful');
+const app = express();
+
+app.use(logger('dev'));
+app.use(bodyParser.json());
+
+// Require routes
+require('./routes')(app);
+
+app.get('*', (req, res) =>
+  res.status(200).send({
+    message: 'Test!'
   })
-  .catch(error => {
-    console.log('Error creating connection:', error);
-  });
+);
+
+// Server port
+const port = 3001;
+
+app.listen(port, () => {
+  console.log(`Listening on port: ${port}`);
+});
