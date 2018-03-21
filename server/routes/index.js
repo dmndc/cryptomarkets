@@ -8,7 +8,9 @@ module.exports = app => {
     })
   );
 
-  app.post('api/users', usersController.create);
+  app.post('/api/users', usersController.create);
+  app.get('/api/users', usersController.list);
 
-  app.post('api/assets', assetsController.create);
+  app.post('/api/assets', assetsController.create);
+  app.get('/api/assets', assetsController.list);
 };
