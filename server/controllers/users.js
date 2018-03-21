@@ -1,4 +1,4 @@
-const User = require('../models').User;
+const { User } = require('../models');
 
 module.exports = {
   create(req, res) {
@@ -6,6 +6,12 @@ module.exports = {
       username: req.body.username
     })
       .then(user => res.status(201).send(user))
+      .catch(error => res.status(400).send(error));
+  },
+
+  list(req, res) {
+    return User.all()
+      .then(todos => res.status(200).send(todos))
       .catch(error => res.status(400).send(error));
   }
 };
