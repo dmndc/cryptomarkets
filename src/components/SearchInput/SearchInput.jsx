@@ -14,9 +14,14 @@ type propTypes = {
   setPriceFilter: Function
 };
 
-function SearchInput(props: propTypes) {
-  const { searchTerm, marketCapFilter, priceFilter, setSearchTerm, setMarketCapFilter, setPriceFilter } = props;
-
+function SearchInput({
+  searchTerm,
+  marketCapFilter,
+  priceFilter,
+  setSearchTerm,
+  setMarketCapFilter,
+  setPriceFilter
+}: propTypes) {
   return (
     <Container>
       <Row>
