@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Container, Col, CardColumns } from 'reactstrap';
+import { Container, CardColumns } from 'reactstrap';
 import AssetCard from './../AssetCard/AssetCard';
 
 import { getData } from './../../ducks/data';
@@ -14,9 +14,7 @@ class AssetsGrid extends Component {
   render() {
     return (
       <Container>
-        {/* <Row> */}
-        <CardColumns>{this.props.data.map(asset => <AssetCard {...asset} key={asset.id} />)}</CardColumns>
-        {/* </Row> */}
+        <CardColumns>{this.props.data.map((asset, i) => <AssetCard {...asset} key={i} />)}</CardColumns>
       </Container>
     );
   }
