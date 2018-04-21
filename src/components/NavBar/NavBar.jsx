@@ -4,7 +4,7 @@ import SearchBar from './../SearchBar/SearchBar';
 
 import logo from '../../mainlogo.svg';
 
-export default class Example extends Component {
+export default class NavBar extends Component {
   constructor(props) {
     super(props);
 

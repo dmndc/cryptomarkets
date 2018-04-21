@@ -15,21 +15,14 @@ import './App.css';
 
 import router from './router';
 
-function App(props) {
+export function App(props) {
   const { getData } = props;
   return (
     <div className="App">
       <NavBar />
-      <Container>
+      {router}
+      {/* <Container>
         <Row>
-          <Col>
-            <h1>My New App</h1>
-          </Col>
-        </Row>
-        <Row>
-          <Col>
-            <h3>Your crypto companion</h3>
-          </Col>
           <Col>
             <Button color="primary" onClick={() => getData()}>
               Get Price Data
@@ -45,7 +38,7 @@ function App(props) {
 
         <h6>Loading: {props.loading ? 'Loading...' : 'Not Loading!'}</h6>
         <CoinTable data={props.data} />
-      </Container>
+      </Container> */}
       <Footer />
     </div>
   );
